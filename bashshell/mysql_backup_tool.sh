@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# FOR CRONTAB, FOLLOWING (*) x2.
+
 #########################################################################################
 #                                                                                       #
 #   #AUTHOR:        NIGHTBARRON                                                         #
@@ -20,7 +22,10 @@
 # Global Variables
 
 MYSQL_USER='root'
-MYSQL_PASSWD=
+
+# (*) EDIT PASSWORD HERE FOR CRONTAB WORKING!!!
+MYSQL_PASSWD='123456a@'
+
 IGNORE_DB="(^mysql|^sys$|_schema$)"
 DATE_BACKUP=$(date +%y%m%d)
 BACKUP_DIR=$HOME"/sql_backup/"$DATE_BACKUP
@@ -86,7 +91,10 @@ mainEntry(){
     # Make BACKUP FOLDER 
     mkdir -p $BACKUP_DIR
     # Get root MySQL Password
+
+    # (*) DISABLED LINE BELOW FOR CRONTAB
     rootPasswd
+
     # Create Backup
     backUpDatabases
 }
