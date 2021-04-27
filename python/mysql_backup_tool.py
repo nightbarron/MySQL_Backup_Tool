@@ -4,7 +4,7 @@
 #                                                                                       #
 #   #AUTHOR:        NIGHTBARRON                                                         #
 #   #DATE:          27/04/2021                                                          #
-#   #For remoted backup, just change the MYSQL_HOST
+#   #For remoted backup, just change the MYSQL_HOST                                     #
 #   #CRON:                                                                              #
 #       # example cron for daily db backup @ 9:15 am                                    #
 #       # min  hr mday month wday user-name command                                     #
