@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # This python code designed for CRONTAB, please change at (*) for yours!!!
 
 #########################################################################################
