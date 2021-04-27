@@ -7,5 +7,7 @@
                                                                                     
 @RESTORE from backup:                                                           
 - CREATE DATABASE as THE SAME as LOST!!                                        
-- `gunzip < [backupfile.sql.gz] | mysql -u [uname] -p[pass] [dbname]`           
+- `gunzip < [backupfile.sql.gz] | mysql -u [uname] -p[pass] [dbname]`    
+
+@Donate me at: Vietcombank (Vietnam), Bank Number: 1020471229
                                                                                       
