@@ -28,7 +28,10 @@ MYSQL_PASSWD='123456a@'
 
 IGNORE_DB="(^mysql|^sys$|_schema$)"
 DATE_BACKUP=$(date +%y%m%d)
+OLD_BACKUP=$(date +%y%m%d --date='-3 day')
 BACKUP_DIR=$HOME"/sql_backup/"$DATE_BACKUP
+KEEP_BACKUPS_FOR=3 # DAYS
+DELETED_DIR=$HOME"/sql_backup/"$OLD_BACKUP
 
 # Functions
 
@@ -52,6 +55,11 @@ motd() {
     echo '@Author: Night Barron'
     echo '## NOTE: Default BACKUP DIRECTORY: '$BACKUP_DIR'/<dbname>.sql.gz'
     echo
+}
+
+deleteOldBackup() {
+    echo "Deleting $OLD_BACKUP/*.sql.gz older than $KEEP_BACKUPS_FOR days"
+    rm -rf $OLD_BACKUP
 }
 
 databaseList() {
@@ -88,6 +96,7 @@ backUpDatabases(){
 
 mainEntry(){
     motd
+    deleteOldBackup
     # Make BACKUP FOLDER 
     mkdir -p $BACKUP_DIR
     # Get root MySQL Password
