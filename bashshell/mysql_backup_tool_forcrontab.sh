@@ -24,7 +24,7 @@
 MYSQL_USER='root'
 
 # (*) EDIT PASSWORD HERE FOR CRONTAB WORKING!!!
-MYSQL_PASSWD='123456aA@'
+MYSQL_PASSWD='4ee3810946af0e06'
 
 IGNORE_DB="(^mysql|^sys$|_schema$)"
 DATE_BACKUP=$(date +%y%m%d)
